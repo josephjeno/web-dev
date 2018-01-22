@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>task2</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1 id="number">10</h1>
+<button id="alert">Alert</button>
+<button id="increment">Increment</button>
+<button id="append">Append</button>
+
+<script>
+
+document.getElementById("alert").addEventListener("click",
+function(){
+	alert(number.innerText);
+});
+
+document.getElementById("increment").addEventListener("click",
+function(){
+	number.innerText = Number(number.innerText) + 1;
+});
+
+document.getElementById("append").addEventListener("click",
+function(){
+	var newP = document.createElement("p");
+	newP.innerText = document.getElementById("number").innerText;
+	node = document.children[0].children[1];
+	node.insertBefore(newP, document.getElementById("div1"));
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>task3</title>
+<meta charset="UTF-8">
+<style>
+h1 {text-align: center;}
+#links {
+	text-align: center;
+	width: 33%;
+	float: left;
+}
+#rhcontent {
+	width: 66%;
+	float: right;
+}
+p {margin: 0 1em 1em;}
+.bottlesText {display: none;}
+.lastThingText {display: none;}
+</style>
+</head>
+<body>
+<h1>HW02 Task Three</h1>
+<div id="links">
+	<p><a href="task3.html" id="loremIpsem">Lorem Ipsem</a></p>
+	<p><a href="task3.html" id="bottles99">99 Bottles</a></p>
+	<p><a href="task3.html" id="lastThing">Last Thing</a>
+</div>
+<div id="rhcontent">
+<!-- Attributed to https://en.wikipedia.org/wiki/Lorem_ipsum -->
+	<p class="loremText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p class="loremText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p class="loremText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p class="loremText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<!-- Attributed to https://en.wikipedia.org/wiki/99_Bottles_of_Beer -->	
+	<p class="bottlesText">99 bottles of beer on the wall, 99 bottles of beer.<br>
+		Take one down, pass it around, 98 bottles of beer on the wall...</p>
+	<p class="bottlesText">98 bottles of beer on the wall, 98 bottles of beer.<br>
+		Take one down, pass it around, 97 bottles of beer on the wall...</p>
+	<p class="bottlesText">97 bottles of beer on the wall, 97 bottles of beer.<br>
+		Take one down, pass it around, 96 bottles of beer on the wall...</p>
+	<p class="bottlesText">96 bottles of beer on the wall, 96 bottles of beer.<br>
+		Take one down, pass it around, 95 bottles of beer on on the wall...</p>
+
+	<p class="lastThingText">this is the third thing</p>
+</div>	
+
+<script>
+document.getElementById("loremIpsem").addEventListener("click", function(event){
+event.preventDefault();
+document.getElementsByClassName('loremText')[0].style.display = 'block';
+document.getElementsByClassName('loremText')[1].style.display = 'block';
+document.getElementsByClassName('loremText')[2].style.display = 'block';
+document.getElementsByClassName('loremText')[3].style.display = 'block';
+document.getElementsByClassName('bottlesText')[0].style.display = 'none';
+document.getElementsByClassName('bottlesText')[1].style.display = 'none';
+document.getElementsByClassName('bottlesText')[2].style.display = 'none';
+document.getElementsByClassName('bottlesText')[3].style.display = 'none';
+document.getElementsByClassName('lastThingText')[0].style.display = 'none';
+});
+document.getElementById("bottles99").addEventListener("click", function(event){
+event.preventDefault();
+document.getElementsByClassName('loremText')[0].style.display = 'none';
+document.getElementsByClassName('loremText')[1].style.display = 'none';
+document.getElementsByClassName('loremText')[2].style.display = 'none';
+document.getElementsByClassName('loremText')[3].style.display = 'none';
+document.getElementsByClassName('bottlesText')[0].style.display = 'block';
+document.getElementsByClassName('bottlesText')[1].style.display = 'block';
+document.getElementsByClassName('bottlesText')[2].style.display = 'block';
+document.getElementsByClassName('bottlesText')[3].style.display = 'block';
+document.getElementsByClassName('lastThingText')[0].style.display = 'none';
+});
+document.getElementById("lastThing").addEventListener("click", function(event){
+event.preventDefault();
+document.getElementsByClassName('loremText')[0].style.display = 'none';
+document.getElementsByClassName('loremText')[1].style.display = 'none';
+document.getElementsByClassName('loremText')[2].style.display = 'none';
+document.getElementsByClassName('loremText')[3].style.display = 'none';
+document.getElementsByClassName('bottlesText')[0].style.display = 'none';
+document.getElementsByClassName('bottlesText')[1].style.display = 'none';
+document.getElementsByClassName('bottlesText')[2].style.display = 'none';
+document.getElementsByClassName('bottlesText')[3].style.display = 'none';
+document.getElementsByClassName('lastThingText')[0].style.display = 'block';
+});
+</script>
+</body>
+</html>
