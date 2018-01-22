@@ -1,0 +1,41 @@
+
+Web Dev Spring 2018 HW02 Status
+
+Answer the following questions:
+
+1. What's your name?
+Joseph Jeno
+
+
+2. What's the URL of the github repo with your work for this HW?
+
+
+
+
+3. What's the URL that you deployed to?
+http://hw02.josephjeno.com
+
+
+4. How many of the tutorial exercises did you really do?
+Most, ran out of time but will be going back to review.
+
+
+5. How comfortable do you feel with HTML and CSS now?
+Pretty good
+
+
+6. How comfortable do you feel with JS and the DOM now?
+Okay
+
+
+7. Do all four of your pages pass the W3C HTML validator?
+ (https://validator.w3.org/)
+Yes, although I get a warning on task3 regarding the Lorem Epsom text.
+
+
+
+And here's a list of tasks for grading comments. Just leave this here:
+ - Task 1
+ - Task 2
+ - Task 3
+ - Submission
