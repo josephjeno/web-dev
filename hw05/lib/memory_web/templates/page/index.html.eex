@@ -1,0 +1,14 @@
+<h1>Memory Game</h1>
+
+<div id="index-page">
+  <div class="row">
+    <div class="col">
+      <p>Enter name of game to join</p>
+      <p><input type="text" id="game-input"></p>
+      <button id="game-button">Join Game</button>
+    </div>
+  </div>  
+</div>
+
+
+
