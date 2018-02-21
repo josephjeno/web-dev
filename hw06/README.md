@@ -42,6 +42,6 @@ There are a large number of improvements that can be made:
     In the feed, completed tasks could be moved to a separate section.
     When creating new tasks, inputting a non-existant user could display an error message instead of a server error.
     The Time spent dials could increment the amount by multiples of 15 instead of 1.
-    General UI improvements all around.
+    General GUI improvements all around.
 
 
