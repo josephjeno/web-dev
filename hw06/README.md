@@ -24,9 +24,14 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
     
 I made the following app decisions:
 
-    I decided to route the user back to the login page after logging in, as ideally there would be a message greeting the user with stats on current tasks.  Right now the user may click the feed button in the top right to view the current feed.
-    When creating a new task, I left the completed? toggle instead of auto-setting to false, in case the user would like to log a task that has already been completed.
-    I am viewing this app as something that a systems administrator might use personally, so I am okay with the user(s) seeing the /users and /tasks index pages.
+    I decided to route the user back to the login page after logging in, as ideally there would be a message greeting the 
+    user with stats on current tasks.  Right now the user may click the feed button in the top right to view the current feed.
+    
+    When creating a new task, I left the completed? toggle instead of auto-setting to false, in case the user would like to 
+    log a task that has already been completed.
+    
+    I am viewing this app as something that a systems administrator might use personally, so I am okay with the user(s) seeing
+    the /users and /tasks index pages.
     
 There are a large number of improvements that can be made:
 
