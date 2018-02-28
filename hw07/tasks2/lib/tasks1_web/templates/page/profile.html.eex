@@ -1,0 +1,25 @@
+  <%= if !Enum.empty? @managers do %>
+      <h2>Managers</h2>
+      <%= Enum.map @managers, fn m -> %>
+        <div class="row">
+          <div class="col">
+            <p>Name: <%= m.manager.name %></p>
+            <p>Email: <%= m.manager.email %></p>
+            <hr />
+          </div>
+        </div>
+      <% end %>
+  <% end %>
+
+  <%= if !Enum.empty? @underlings do %>
+      <h2>Underlings</h2>
+      <%= Enum.map @underlings, fn u -> %>
+        <div class="row">
+          <div class="col">
+            <p>Name: <%= u.underling.name %></p>
+            <p>Email: <%= u.underling.email %></p>
+            <hr />
+          </div>
+        </div>
+      <% end %>
+  <% end %>

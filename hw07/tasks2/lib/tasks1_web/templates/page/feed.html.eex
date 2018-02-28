@@ -1,0 +1,68 @@
+<script>
+window.current_user_id = "<%= @current_user.id %>";
+window.time_path = "<%= time_block_path(@conn, :index) %>";
+</script>
+
+<%= if !Enum.empty? @mytasks do %>
+    <h2>My Tasks</h2>
+    <%= Enum.map @mytasks, fn task -> %>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Title: <%= task.title %></h6>
+            <p>Manager: <%= task.from.name %></p>
+            <p>Description: <%= task.description %></p>
+            <p>Complete?: <%= task.completed? %></p>
+            <div id="<%= "task-time" <> Integer.to_string(task.id) %>">
+              <%= Enum.map task.timeblock, fn time -> %>
+                <div class="time" data-time-box= "<%= "div" <> Integer.to_string(time.id) %>">
+                  Start Date: <%= NaiveDateTime.to_date(time.start) %><br>
+                  Start Time: <%= NaiveDateTime.to_time(time.start) %><br>
+                  End Date: <%= NaiveDateTime.to_date(time.end) %><br>
+                  End Time: <%= NaiveDateTime.to_time(time.end) %><br>
+                  <button class="btn_del btn" data-del-id="<%= time.id %>">Delete</button>
+                  <button class="btn_upd btn">Update</button>
+                </div><br>
+              <% end %>
+            </div>
+            <button class="btn_on btn" data-task-id = "<%= task.id %>" data-start-time="">
+              start time
+            </button>
+            <%= link "Edit", to: task_path(@conn, :edit, task.id) %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+<% end %>
+
+<%= if !Enum.empty? @undertasks do %>
+    <h2>My Underling Tasks</h2>
+    <span><%= link "Assign New Task", to: task_path(@conn, :new) %></span>
+    <%= Enum.map @undertasks, fn task -> %>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Title: <%= task.title %></h6>
+            <p>Assigned User: <%= task.user.name %></p>
+            <p>Description: <%= task.description %></p>
+            <p>Complete?: <%= task.completed? %></p>
+            <%= link "Edit", to: task_path(@conn, :edit, task.id) %>
+            <br />
+            <p>Time Spent:</p>
+            <%= Enum.map task.timeblock, fn time -> %>
+              Start date: <%= NaiveDateTime.to_date(time.start) %> <br>
+              Start time: <%= NaiveDateTime.to_time(time.start) %> <br>
+              <br>
+              End date: <%= NaiveDateTime.to_date(time.end) %> <br>
+              End time: <%= NaiveDateTime.to_time(time.end) %> <br>
+              <hr>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+<% end %>

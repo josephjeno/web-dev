@@ -1,0 +1,18 @@
+<h2>Show Managers</h2>
+
+<ul>
+
+  <li>
+    <strong>Manager id:</strong>
+    <%= @manage.manager_id %>
+  </li>
+
+  <li>
+    <strong>Underling id:</strong>
+    <%= @manage.underling_id %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: manage_path(@conn, :edit, @manage) %></span>
+<span><%= link "Back", to: manage_path(@conn, :index) %></span>
